@@ -1,0 +1,12 @@
+
+# other repository
+nvim/
+
+
+# unnecessary
+fish/completions/
+fish/conf.d/
+fish/functions/
+fish/fish_plugins 
+fish/fishd.tmp.qOSLOQ
+

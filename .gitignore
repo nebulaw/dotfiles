@@ -1,12 +1,16 @@
 
+
+.gitconfig
+
 # other repository
 nvim/
-
 
 # unnecessary
 fish/completions/
 fish/conf.d/
 fish/functions/
+fish/themes/
 fish/fish_plugins 
 fish/fishd.tmp.qOSLOQ
+fish/fish_plugins
 

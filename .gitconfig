@@ -1,7 +1,11 @@
+
+# stolen from craftzdog
+
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
 	ignorecase = false
+	autocrlf = input
 [push]
   default = simple
 [color]
@@ -39,7 +43,7 @@
 [hub]
   protocol = https
 [github]
-	user = craftzdog
+	user = nebulaw
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
@@ -55,3 +59,8 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
+[user]
+	email = karlo.tsutskiridze@gmail.com
+	name = nebulaw
+[pull]
+	rebase = false

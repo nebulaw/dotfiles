@@ -1,22 +1,36 @@
 #!/bin/sh
 
-
-pgrep -x sxhkd > /dev/null || sxhkd &
+sxhkd &
 nitrogen --restore &
+xsetroot -cursor_name left_ptr &
+picom -f &
+xset s 3600 3600 &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d www dev media chat other
 
-bspc config border_width         2
-bspc config window_gap          12
+bspc config border_width          2
+bspc config focused_border_color  \#161012
+bspc config active_border_color   \#fefefe
+bspc config normal_border_color   \#161012
+bspc config window_gap            20
 
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio           0.52
+bspc config borderless_monocle    false
+bspc config gapless_monocle       false
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# www desktop
+bspc rule --add firefox           desktop='www' state=tiled
 
+# dev desktop
+bspc rule --add Code              desktop='dev' state=tiled
 
+# media desktop
+bspc rule --add Spotify           desktop='media' state=pseudo_tiled
+
+# chat desktop
+
+# other desktop
+
+# just states
+bspc rule --add Alacritty         state=pseudo_tiled
+bspc rule --add Ulauncher         state=floating  border=off

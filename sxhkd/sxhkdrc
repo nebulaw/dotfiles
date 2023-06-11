@@ -10,17 +10,32 @@ super + b
   firefox
 
 super + space
-  ulauncher
+  ulauncher-toggle
+
+super + e
+  nautilus
+
+# color picker. outputs to clipboard
+super + shift + s
+  xcolor -s
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
+# AUDIO/BRIGHTNESS
+XF86MonBrightness{Up,Down}  
+  brightnessctl s {+10%,10%-}
 
-# quit/restart bspwm
+XF86Audio{Raise,Lower}Volume  
+  amixer -q sset Master 5%{+,-}
+
+XF86AudioMute  
+  amixer -q sset Master toggle
+
+super + shift + bracket{right,left}
+  setxkbmap {us,ge}
+
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
@@ -40,10 +55,6 @@ super + y
 super + g
 	bspc node -s biggest.window
 
-#
-# state/flags
-#
-
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -51,10 +62,6 @@ super + {t,shift + t,s,f}
 # set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
-
-#
-# focus/swap
-#
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}

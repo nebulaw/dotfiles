@@ -1,10 +1,13 @@
 #!/bin/sh
 
 sxhkd &
+ulauncher &
 nitrogen --restore &
 xsetroot -cursor_name left_ptr &
 picom -f &
 xset s 3600 3600 &
+sh ~/.config/polybar/launch.sh & 
+nm-applet &
 
 bspc monitor -d www dev media chat other
 
@@ -19,7 +22,7 @@ bspc config borderless_monocle    false
 bspc config gapless_monocle       false
 
 # www desktop
-bspc rule --add firefox           desktop='www' state=tiled
+bspc rule --add Firefox           desktop='www' state=tiled
 
 # dev desktop
 bspc rule --add Code              desktop='dev' state=tiled

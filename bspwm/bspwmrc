@@ -1,5 +1,8 @@
 #!/bin/sh
 
+if [[ $(xrandr -q | grep "eDP-1 connected") ]]; then
+  xrandr --output eDP-1 --primary --mode 1600x900 --pos 0x0 --rotate normal &
+fi
 sxhkd &
 ulauncher &
 nitrogen --restore &

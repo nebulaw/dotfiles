@@ -6,7 +6,7 @@ alias l "ls -l"
 alias ll "ls -l"
 alias lla "ll -a"
 alias g "git"
-alias vim "nvim"
+# alias vim "nvim"
 
 # BINARIES
 set -gx EDITOR nvim

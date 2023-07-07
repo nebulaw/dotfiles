@@ -10,8 +10,6 @@ fish/completions/
 fish/conf.d/
 fish/functions/
 fish/themes/
-fish/fish_plugins 
+fish/fish_*
 fish/fishd.tmp.qOSLOQ
-fish/fish_plugins
-fish/fish_variables
 

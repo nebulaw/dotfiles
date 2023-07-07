@@ -1,8 +1,6 @@
 #!/bin/sh
 
-if [[ $(xrandr -q | grep "eDP-1 connected") ]]; then
-  xrandr --output eDP-1 --primary --mode 1600x900 --pos 0x0 --rotate normal &
-fi
+xrandr -s 1920x1080
 sxhkd &
 ulauncher &
 nitrogen --restore &
@@ -18,11 +16,12 @@ bspc config border_width          2
 bspc config focused_border_color  \#161012
 bspc config active_border_color   \#fefefe
 bspc config normal_border_color   \#161012
-bspc config window_gap            20
+bspc config window_gap            0
+bspc config gapless_monocle       true
+bspc config borderless_monocle    true
+
 
 bspc config split_ratio           0.52
-bspc config borderless_monocle    false
-bspc config gapless_monocle       false
 
 # www desktop
 bspc rule --add Firefox           desktop='www' state=tiled
@@ -40,3 +39,5 @@ bspc rule --add Spotify           desktop='media' state=pseudo_tiled
 # just states
 bspc rule --add Alacritty         state=pseudo_tiled
 bspc rule --add Ulauncher         state=floating  border=off
+
+

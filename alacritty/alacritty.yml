@@ -1,19 +1,18 @@
 
 # colorscheme
 import:
-  - ~/.alacritty-colorscheme/themes/solarized_dark.yaml
+  - ~/.alacritty-colorscheme/themes/paramount.yaml
 
 env:
   TERM: xterm-256color
 
 window:
-  
   dimensions:
     columns: 82
     lines: 25
 
   decorations: full
-  opacity: 0.70
+  opacity: 1
   startup_mode: Windowed
   dynamic_title: true
   decorations_theme_variant: Dark
@@ -29,21 +28,21 @@ scrolling:
 
 font:
   normal:
-    family: MonoLisa
+    family: FiraCodeNFM
     style: Regular
   bold:
-    family: MonoLisa
+    family: FiraCodeNFM
     style: Bold
 
   italic:
-    family: MonoLisa
+    family: FiraCodeNFM
     style: Italic
 
   bold_italic:
-    family: MonoLisa
+    family: FiraCodeNFM
     style: Bold Italic
 
-  size: 18
+  size: 16
 
   offset:
     x: 0
